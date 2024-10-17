@@ -4,48 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>canvas</title>
+    <title>Canvas Game</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <div class="select-none">
-        <header
-            class="header top-0 left-0 h-[55px] absolute alint-middle width-screen mx-auto sm:px-20 px-6 text-white">
-            <div class="width-full mx-auto h-full text-white">
-                <nav class="flex alint-middle items-center h-full justify-between ">
+        <header class="header">
+            <div class="header-inner">
+                <nav class="nav">
                     <ul id="score" class="li">Score = 0</ul>
-                    <ul class=" heading li text-[1.5rem] ">
-                        <span class="text-red-900 drop-shadow-xl">BUGS</span>
-                        <span class="drop-shadow-xl">OF</span>
-                        <span class="text-emerald-700 drop-shadow-xl">WAR</span>
+                    <ul class="heading li">
+                        <span class="heading-red">BUGS</span>
+                        <span class="heading-drop">OF</span>
+                        <span class="heading-green">WAR</span>
                     </ul>
                     <ul id="health" class="li">Health = 3</ul>
                 </nav>
             </div>
         </header>
         <canvas></canvas>
-        <div id="overlay" class="fixed inset-0 flex items-center justify-center">
-            <div class="overlay max-w-md w-full text-center p-8 rounded-lg shadow-lg">
-                <h1 class="text-4xl font-bold leading-none"> <span class="text-white" id="totalScore">0</span> </h1>
-                <p class="text-sm text-white m-2">Points</p>
+        <div id="overlay" class="overlay">
+            <div class="overlay-inner">
+                <h1 class="overlay-score"><span id="totalScore">0</span></h1>
+                <p class="overlay-points">Points</p>
                 <div>
-                    <button id="startBtn"
-                        class="bg-blue-500 hover:bg-blue-700 text-white w-full rounded-full font-bold py-2 px-4 rounded">Start
-                        Game</button>
+                    <button id="startBtn" class="start-button">Start Game</button>
                 </div>
             </div>
         </div>
-
-
     </div>
-
+    <script type="module" src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-<script type="module" src="index.js"></script>
-<!-- <script type="module" src="dat.gui.module.js"></script>  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </html>
