@@ -50,7 +50,7 @@ function randomColor(color){
     return color[Math.floor(Math.random()*color.length)];
 }
 
-// we have to calc the distance first
+//calc the distance first
 function getDistance(x1,x2,y1,y2){
     let xDistance = x2-x1;
     let yDistance = y2-y1;
@@ -191,8 +191,8 @@ class Enemy {
         this.radius =radius
         this.color =color
         this.velocity = {
-            x:Math.cos(angle)*5,
-            y:Math.sin(angle)*5} 
+            x:Math.cos(angle),
+            y:Math.sin(angle)} 
         this.s= 20
     }
 
@@ -225,11 +225,11 @@ class Enemy {
 
         this.angle = Math.atan2(this.y-player.y,this.x-player.x);
         this.velocity = {
-            x:Math.cos(this.angle),
-            y:Math.sin(this.angle)} 
+            x:Math.cos(this.angle)*Math.min((score/50 + 1),2),
+            y:Math.sin(this.angle)*Math.min((score/50 + 1),2)} 
 
         this.x += -(this.velocity.x)
-        this.y += (-this.velocity.y)
+        this.y += -(this.velocity.y)
         
         this.draw();
     }
