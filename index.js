@@ -225,8 +225,8 @@ class Enemy {
 
         this.angle = Math.atan2(this.y-player.y,this.x-player.x);
         this.velocity = {
-            x:Math.cos(this.angle)*Math.min((score/50 + 1),2),
-            y:Math.sin(this.angle)*Math.min((score/50 + 1),2)} 
+            x:Math.cos(this.angle)*Math.min((score/5000 + 1),2),
+            y:Math.sin(this.angle)*Math.min((score/5000 + 1),2)} 
 
         this.x += -(this.velocity.x)
         this.y += -(this.velocity.y)
